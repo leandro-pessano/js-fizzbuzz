@@ -6,7 +6,7 @@
 // Come faccio a sapere se un numero è divisibile per?
 // Abbiamo visto qualcosa di particolare che possiamo usare?
 
-var numeri = [];
+var numeri = 0;
 
 for (var i = 1; i <= 100; i++) {
   numeri += i;
@@ -20,3 +20,17 @@ for (var i = 1; i <= 100; i++) {
     console.log(i);
   }
 }
+
+var numeri = [];
+
+for (var i = 0; i < 100; i++) {
+  numeri.push(i+1);
+  if ( (numeri[i] % 3 == 0) && (numeri[i] % 5 == 0) ) {
+  numeri[i] = 'Fizzbuzz';
+} else if (numeri[i] % 3 == 0) {
+    numeri[i] = 'Fizz';
+  } else if (numeri[i] % 5 == 0) {
+    numeri[i] = 'Buzz';
+  }
+}
+console.log(numeri);
